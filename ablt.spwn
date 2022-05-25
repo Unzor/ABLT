@@ -1,0 +1,6 @@
+let ABLT_FN = (name) {
+	return $.http_request('get', 'http://localhost:3000/ablt/run/{}'.fmt(name), {}, '').text
+}
+return {
+	ABLT_FN: ABLT_FN
+}
