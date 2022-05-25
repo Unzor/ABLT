@@ -2,9 +2,9 @@
 Run Node.js functions from SPWN code. (lol everyone will hate me for this)
 
 # Usage
-### index.spwn
+### index.spwn (using SPGHTT)
 ```ts
-let ablt = import "ablt.spwn"
+let ablt = import ablt
 $.print(ablt.ABLT_FN("hello", ['world']))
 ```
 ### index.js
