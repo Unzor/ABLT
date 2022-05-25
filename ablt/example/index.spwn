@@ -1,0 +1,2 @@
+let ablt = import "ablt.spwn"
+$.print(ablt.ABLT_FN("hello", ['world']))
