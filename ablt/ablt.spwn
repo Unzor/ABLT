@@ -1,5 +1,9 @@
 let ABLT_FN = (name, args = [""]) {
-	return $.http_request('get', 'http://localhost:3000/ablt/run/{}?args={}'.fmt([name, $.b64encode(args.join(","))]), {}, '').text
+	if (args == [""]) {
+		return $.http_request('get', 'http://localhost:3000/ablt/run/{}'.fmt([name]), {}, '').text
+	} else {
+		return $.http_request('get', 'http://localhost:3000/ablt/run/{}?args={}'.fmt([name, $.b64encode(args.join(","))]), {}, '').text
+	}
 }
 return {
 	ABLT_FN: ABLT_FN
