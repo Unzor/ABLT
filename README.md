@@ -19,3 +19,11 @@ To use "index.js", run:
 ```
 node connector index.js
 ```
+
+Or, to use a function when ran, create a file named "preload.json", and put this in: ```json
+{
+  "files": [
+    "file.js"
+  ]
+}
+```
